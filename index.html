@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SA Case Law – Clean Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>South African Case Law</h1>
+    <p>A Simplified Legal Research Interface</p>
+  </header>
+
+  <main>
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search case name or citation..."
+    >
+
+    <div class="filters">
+      <select id="courtFilter">
+        <option value="">All Courts</option>
+      </select>
+
+      <select id="yearFilter">
+        <option value="">All Years</option>
+      </select>
+    </div>
+
+    <div id="caseList"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
