@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SA Case Law – Clean Interface</title>
+  <title>SA Case Law</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="description" content="A clean, simplified interface for South African case law research.">
+  <meta name="keywords" content="South African case law, SAFLII, legal research, Constitutional Court">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,11 +16,14 @@
   </header>
 
   <main>
-    <input 
-      type="text" 
-      id="searchInput" 
-      placeholder="Search case name or citation..."
-    >
+    <div class="search-wrapper">
+  <input type="text" id="searchInput" placeholder="Search cases…" />
+  <button class="search-button" aria-label="Search">
+    ⌕
+  </button>
+  </div>
+
+
 
     <div class="filters">
       <select id="courtFilter">
@@ -33,5 +39,12 @@
   </main>
 
   <script src="script.js"></script>
+
+  <footer>
+  This website provides case metadata and summaries for research purposes only.
+  Full judgments are hosted on SAFLII.
+  This site is not affiliated with SAFLII.
+</footer>
+
 </body>
 </html>
