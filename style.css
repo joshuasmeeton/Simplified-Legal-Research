@@ -1,66 +1,205 @@
+/* ===== Base ===== */
+
 body {
-  font-family: system-ui, sans-serif;
-  background: #f7f7f7;
   margin: 0;
-  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f0f0f0;
+  color: #111;
+  line-height: 1.6;
 }
+
+/* ===== Header ===== */
 
 header {
-  background: #1a1a1a;
-  color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 3rem 1rem 2rem;
 }
 
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
+header h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-input, select {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
+header p {
+  color: #555;
   font-size: 1rem;
 }
+
+/* ===== Layout ===== */
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+/* ===== Inputs ===== */
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #111;
+}
+
+/* ===== Search Bar ===== */
+
+/* ===== Search Bar (Full Height Icon) ===== */
+
+.search-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+/* ===== Search Focus Animation ===== */
+
+.search-wrapper input,
+.search-button {
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+.search-wrapper input:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+}
+
+.search-wrapper input:focus + .search-button {
+  background-color: #000;
+}
+
+
+.search-button {
+  width: 3rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #111;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-button:hover {
+  opacity: 0.85;
+}
+
+
+
+/* ===== Filters ===== */
 
 .filters {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
+/* ===== Case cards ===== */
+
 #caseList {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .case-card {
   background: white;
-  padding: 1.25rem;
-  margin-bottom: 1rem;
+  border: 1px solid #ddd;
   border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
 .case-card h3 {
-  margin-top: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.3rem;
+  margin: 0 0 0.3rem;
 }
 
-.case-card a {
-  text-decoration: none;
-  color: #0056b3;
+.case-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #444;
 }
+
+/* ===== Summary toggle ===== */
 
 .summary-toggle {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   padding: 0.4rem 0.7rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.summary {
-  background: #f1f1f1;
-  padding: 0.75rem;
-  margin-top: 0.75rem;
-  border-radius: 4px;
+.summary-toggle:hover {
+  opacity: 0.85;
 }
 
+/* ===== Summary box ===== */
+
+.summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.summary p {
+  margin-bottom: 0.6rem;
+}
+
+.summary strong {
+  color: #111;
+}
+
+/* ===== Links ===== */
+
+.case-card a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #111;
+  border-bottom: 1px solid #111;
+}
+
+.case-card a:hover {
+  opacity: 0.7;
+}
+
+/* ===== Footer ===== */
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  padding: 2rem 1rem;
+}
